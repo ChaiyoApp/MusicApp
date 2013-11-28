@@ -15,8 +15,9 @@
 
 @implementation SongViewController
 @synthesize songListArray;
+@synthesize pictureListArray;
 @synthesize songTableView;
-
+@synthesize myPlaylistQuery;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -53,25 +54,47 @@
         // From Nib
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SongCell_iPhone" owner:self options:nil];
     	cell = (SongCell *)[nib objectAtIndex:0];
-        MPMediaItemCollection *itemCollection;
+        
         
         //[cell.imageSong setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"shelf"]]];
         
         //set content left side
-        //[cell.titleSong setText:[songListArray objectAtIndex:indexPath.row]];
-        //[cell.titleSong setFont:font_RSU_Regular15];
+        
+//        [cell.titleSong setFont:"font_RSU_Regular15"];
     }
+//    MPMediaQuery *myPlaylistQuery = [[MPMediaQuery alloc]init];
+//    NSArray *itemSong = [myPlaylistQuery items];
+//    
+//    
+//	UIImage *artworkImage = [UIImage imageNamed:@"noArtworkImage.png"];
+//	MPMediaItemArtwork *artwork = [currentItem valueForProperty: MPMediaItemPropertyArtwork];
+//	
+//	if (artwork) {
+//		artworkImage = [artwork imageWithSize: CGSizeMake (320, 94)];
+//	}
+//	
+//    [artworkImageView setImage:artworkImage];
     
+    [cell.imageSong setImage:[pictureListArray objectAtIndex:indexPath.row]];
+//    [cell.imageSong setBackgroundColor:[UIColor blackColor]];
+    [cell.titleSong setText:[songListArray objectAtIndex:indexPath.row]];
     return cell;
 }
-
-
-#pragma delegate TableView
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    return 120;
 }
 
+#pragma delegate TableView
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PlayerViewController *play = [[PlayerViewController alloc]initWithNibName:@"PlayerViewController" bundle:nil];
+    [play setCurrentIndex:indexPath.row];
+    [play setMyPlaylistQuery:myPlaylistQuery];
+    [self.navigationController pushViewController:play animated:YES];
+}
 
 
 

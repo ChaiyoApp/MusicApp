@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-@interface SongViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "PlayerViewController.h"
+@interface SongViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate>
 {
     
 }
-
+@property (nonatomic,strong) MPMediaQuery *myPlaylistQuery;
 @property (nonatomic,strong) NSArray *songListArray;
+@property (nonatomic,strong) NSArray *pictureListArray;
 @property (nonatomic,strong) UITableView *songTableView;
 
 @end

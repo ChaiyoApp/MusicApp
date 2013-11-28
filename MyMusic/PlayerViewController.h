@@ -14,6 +14,8 @@
 }
 @property (nonatomic,strong) NSArray *songListArray;
 @property NSInteger currentIndex;
+@property (nonatomic,strong) MPMediaQuery *myPlaylistQuery;
+@property (retain, nonatomic) IBOutlet UIImageView *artworkImageView;
 
 @property (retain, nonatomic) IBOutlet UIButton *previousButton;
 @property (retain, nonatomic) IBOutlet UIButton *playPauseButton;
@@ -21,6 +23,11 @@
 @property (retain, nonatomic) IBOutlet UIButton *shuffleButton;
 @property (retain, nonatomic) IBOutlet UIButton *repeatButton;
 @property (retain, nonatomic) IBOutlet UISlider *sliderTime;
+@property (retain, nonatomic) IBOutlet UILabel *titleName;
+@property (retain, nonatomic) IBOutlet UILabel *albumName;
+@property (retain, nonatomic) IBOutlet UILabel *artistName;
+@property (retain, nonatomic) IBOutlet UILabel *currentTime;
+@property (retain, nonatomic) IBOutlet UILabel *endTime;
 
 - (IBAction)endSliding:(id)sender;
 - (IBAction)beginSliding:(id)sender;

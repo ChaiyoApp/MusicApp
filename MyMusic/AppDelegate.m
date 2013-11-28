@@ -11,6 +11,7 @@
 #import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize navigationController;
 
 - (void)dealloc
 {
@@ -24,7 +25,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.navigationController.delegate = self;
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

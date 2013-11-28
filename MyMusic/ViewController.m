@@ -15,19 +15,24 @@
 @implementation ViewController
 @synthesize musicArray;
 @synthesize Count_Song;
-
+@synthesize pictureArray;
 - (void)viewDidAppear:(BOOL)animated
 {
-    musicArray = [self getMusic];
+    [self getMusic];
     Count_Song.text = [NSString stringWithFormat:@"Music = %d Songs",[musicArray count]];
+    SongViewController *song = [[SongViewController alloc]initWithNibName:@"SongViewController" bundle:nil];
+    [song setSongListArray:musicArray];
+    [song setPictureListArray:pictureArray];
+    [song setMyPlaylistQuery:myPlaylistQuery];
+    [self.navigationController pushViewController:song animated:YES];
+//    [self presentViewController:song animated:YES completion:nil];
 }
 - (void)viewDidLoad
 {
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    NSLog(@"My First App");
-    NSLog(@"boso");
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,22 +40,36 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (NSArray *)getMusic
+- (void)getMusic
 {
-    MPMediaQuery *myPlaylistQuery = [[MPMediaQuery alloc]init];
+    myPlaylistQuery = [[MPMediaQuery alloc]init];
 //    MPMediaPropertyPredicate *playListNamePredicate =
 //    [MPMediaPropertyPredicate predicateWithValue: @"THAI" forProperty: MPMediaPlaylistPropertyName];
 //    [myPlaylistQuery addFilterPredicate:playListNamePredicate];
     
     NSArray *itemSong = [myPlaylistQuery items];
     NSLog(@"song total = %d",[itemSong count]);
-//    int i = 1;
-//    for (MPMediaItemCollection *song in itemSong) {
-//        NSString *songname = [song valueForProperty:MPMediaItemPropertyTitle];
-//        NSLog(@"songname %d = %@",i,songname);
+    NSMutableArray *arr = [[NSMutableArray alloc]init];
+    NSMutableArray *picArr = [[NSMutableArray alloc]initWithCapacity:300];
+//    int i = 0;
+    for (MPMediaItemCollection *song in itemSong) {
+        NSString *songname = [song valueForProperty:MPMediaItemPropertyTitle];
+//        NSLog(@"songname%d = , %@",i,songname);
+        MPMediaItemArtwork *artwork = [song valueForProperty:MPMediaItemPropertyArtwork];
+        UIImage *artworkImage = [UIImage imageNamed:@""];
+//        artworkImage set
+        if (artwork) {
+        	artworkImage = [artwork imageWithSize: CGSizeMake (320, 94)];
+        }
+        if (artworkImage == NULL) {
+            artworkImage = [UIImage imageNamed:@"noArtworkImage"];
+        }
+        [arr addObject:songname];
+        [picArr addObject:artworkImage];
 //        i++;
-//    }
-    return itemSong;
+    }
+    musicArray = [arr mutableCopy];
+    pictureArray = [picArr mutableCopy];
 //    [musicPlayer setShuffleMode:MPMusicShuffleModeOff];
 //    [musicPlayer setRepeatMode:MPMusicRepeatModeOne];
 //    [musicPlayer setQueueWithQuery: myPlaylistQuery];
