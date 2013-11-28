@@ -12,12 +12,18 @@
 		D09D57B017E30406000C24BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09D57AF17E30406000C24BD /* CoreGraphics.framework */; };
 		D09D57B617E30406000C24BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D09D57B417E30406000C24BD /* InfoPlist.strings */; };
 		D09D57B817E30406000C24BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09D57B717E30406000C24BD /* main.m */; };
-		D09D57BC17E30406000C24BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D09D57BB17E30406000C24BD /* AppDelegate.m */; };
 		D09D57BE17E30406000C24BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D09D57BD17E30406000C24BD /* Default.png */; };
 		D09D57C017E30406000C24BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09D57BF17E30406000C24BD /* Default@2x.png */; };
 		D09D57C217E30406000C24BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09D57C117E30406000C24BD /* Default-568h@2x.png */; };
-		D09D57C517E30406000C24BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09D57C417E30406000C24BD /* ViewController.m */; };
-		D09D57C817E30406000C24BD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09D57C617E30406000C24BD /* ViewController.xib */; };
+		D0E99EE418471B2A002DDC7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E99ED718471B2A002DDC7D /* AppDelegate.m */; };
+		D0E99EE518471B2A002DDC7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E99ED918471B2A002DDC7D /* ViewController.m */; };
+		D0E99EE618471B2A002DDC7D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E99EDA18471B2A002DDC7D /* ViewController.xib */; };
+		D0E99EE718471B2A002DDC7D /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E99EDC18471B2A002DDC7D /* SongViewController.m */; };
+		D0E99EE818471B2A002DDC7D /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E99EDD18471B2A002DDC7D /* SongViewController.xib */; };
+		D0E99EE918471B2A002DDC7D /* SongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E99EDF18471B2A002DDC7D /* SongCell.m */; };
+		D0E99EEA18471B2A002DDC7D /* SongCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E99EE018471B2A002DDC7D /* SongCell_iPhone.xib */; };
+		D0E99EEB18471B2A002DDC7D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E99EE218471B2A002DDC7D /* PlayerViewController.m */; };
+		D0E99EEC18471B2A002DDC7D /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E99EE318471B2A002DDC7D /* PlayerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +35,23 @@
 		D09D57B517E30406000C24BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D09D57B717E30406000C24BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D09D57B917E30406000C24BD /* MyMusic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMusic-Prefix.pch"; sourceTree = "<group>"; };
-		D09D57BA17E30406000C24BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D09D57BB17E30406000C24BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D09D57BD17E30406000C24BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D09D57BF17E30406000C24BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D09D57C117E30406000C24BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D09D57C317E30406000C24BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D09D57C417E30406000C24BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D09D57C717E30406000C24BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		D0E99ED618471B2A002DDC7D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0E99ED718471B2A002DDC7D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0E99ED818471B2A002DDC7D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0E99ED918471B2A002DDC7D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0E99EDA18471B2A002DDC7D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D0E99EDB18471B2A002DDC7D /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		D0E99EDC18471B2A002DDC7D /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
+		D0E99EDD18471B2A002DDC7D /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
+		D0E99EDE18471B2A002DDC7D /* SongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCell.h; sourceTree = "<group>"; };
+		D0E99EDF18471B2A002DDC7D /* SongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCell.m; sourceTree = "<group>"; };
+		D0E99EE018471B2A002DDC7D /* SongCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongCell_iPhone.xib; sourceTree = "<group>"; };
+		D0E99EE118471B2A002DDC7D /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		D0E99EE218471B2A002DDC7D /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		D0E99EE318471B2A002DDC7D /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +98,20 @@
 		D09D57B117E30406000C24BD /* MyMusic */ = {
 			isa = PBXGroup;
 			children = (
-				D09D57BA17E30406000C24BD /* AppDelegate.h */,
-				D09D57BB17E30406000C24BD /* AppDelegate.m */,
-				D09D57C317E30406000C24BD /* ViewController.h */,
-				D09D57C417E30406000C24BD /* ViewController.m */,
-				D09D57C617E30406000C24BD /* ViewController.xib */,
+				D0E99ED618471B2A002DDC7D /* AppDelegate.h */,
+				D0E99ED718471B2A002DDC7D /* AppDelegate.m */,
+				D0E99ED818471B2A002DDC7D /* ViewController.h */,
+				D0E99ED918471B2A002DDC7D /* ViewController.m */,
+				D0E99EDA18471B2A002DDC7D /* ViewController.xib */,
+				D0E99EDB18471B2A002DDC7D /* SongViewController.h */,
+				D0E99EDC18471B2A002DDC7D /* SongViewController.m */,
+				D0E99EDD18471B2A002DDC7D /* SongViewController.xib */,
+				D0E99EDE18471B2A002DDC7D /* SongCell.h */,
+				D0E99EDF18471B2A002DDC7D /* SongCell.m */,
+				D0E99EE018471B2A002DDC7D /* SongCell_iPhone.xib */,
+				D0E99EE118471B2A002DDC7D /* PlayerViewController.h */,
+				D0E99EE218471B2A002DDC7D /* PlayerViewController.m */,
+				D0E99EE318471B2A002DDC7D /* PlayerViewController.xib */,
 				D09D57B217E30406000C24BD /* Supporting Files */,
 			);
 			path = MyMusic;
@@ -158,11 +182,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E99EE618471B2A002DDC7D /* ViewController.xib in Resources */,
 				D09D57B617E30406000C24BD /* InfoPlist.strings in Resources */,
 				D09D57BE17E30406000C24BD /* Default.png in Resources */,
+				D0E99EEA18471B2A002DDC7D /* SongCell_iPhone.xib in Resources */,
+				D0E99EE818471B2A002DDC7D /* SongViewController.xib in Resources */,
+				D0E99EEC18471B2A002DDC7D /* PlayerViewController.xib in Resources */,
 				D09D57C017E30406000C24BD /* Default@2x.png in Resources */,
 				D09D57C217E30406000C24BD /* Default-568h@2x.png in Resources */,
-				D09D57C817E30406000C24BD /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E99EE518471B2A002DDC7D /* ViewController.m in Sources */,
+				D0E99EE718471B2A002DDC7D /* SongViewController.m in Sources */,
+				D0E99EE418471B2A002DDC7D /* AppDelegate.m in Sources */,
 				D09D57B817E30406000C24BD /* main.m in Sources */,
-				D09D57BC17E30406000C24BD /* AppDelegate.m in Sources */,
-				D09D57C517E30406000C24BD /* ViewController.m in Sources */,
+				D0E99EE918471B2A002DDC7D /* SongCell.m in Sources */,
+				D0E99EEB18471B2A002DDC7D /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +218,6 @@
 				D09D57B517E30406000C24BD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D09D57C617E30406000C24BD /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D09D57C717E30406000C24BD /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,6 +318,7 @@
 				D09D57CD17E30406000C24BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+@interface ViewController : UIViewController<MPMediaPickerControllerDelegate>
 
-@interface ViewController : UIViewController
+@property (nonatomic,strong) NSArray *musicArray;
+@property (retain, nonatomic) IBOutlet UILabel *Count_Song;
 
 @end
